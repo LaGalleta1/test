@@ -27,4 +27,8 @@ RUN set -eux; \
 ENV JAVA_HOME=/opt/java/graalvm \
     PATH="/opt/java/graalvm/bin:$PATH"
 
+WORKDIR     /home/container
+
+COPY        ./../entrypoint.sh /entrypoint.sh
+
 CMD java -version
